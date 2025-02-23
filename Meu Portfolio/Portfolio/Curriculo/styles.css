@@ -1,85 +1,110 @@
-/* Importação de fonte do Google para um design mais profissional */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+/* Importação da fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* Resetando margens e paddings para evitar diferenças entre navegadores */
-* {
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif; /* Aplicando a fonte geral */
 }
 
-/* 🔹 Estilização do corpo da página */
-body {
-    background-color: #121212; /* Cor de fundo escura */
-    color: #ffffff; /* Texto branco para contraste */
-    padding: 20px; /* Espaçamento nas laterais */
-    text-align: center; /* Alinha os textos ao centro */
+/* Estilização geral do corpo da página */
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    text-align: center;
 }
 
-/* 🔹 Cabeçalho */
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+/* Estilização do cabeçalho */
+header{
+    background-color: #b30000;
     padding: 20px;
 }
 
-/* 🔹 Estilo da foto de perfil */
-.foto-perfil {
-    width: 150px; /* Tamanho ajustado da imagem */
-    height: 150px;
-    border-radius: 50%; /* Deixa a imagem redonda */
-    object-fit: cover; /* Garante que a imagem fique ajustada */
-    border: 3px solid red; /* Borda vermelha para dar destaque */
+header h1{
+    font-size: 2em;
 }
 
-/* 🔹 Seção de contatos e certificados */
-section {
-    background-color: #1e1e1e; /* Fundo escuro para destaque */
-    padding: 20px;
+.foto-perfil{
+    width: 150px;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+/* Estilização das seções */
+section{
     margin: 20px auto;
-    border-radius: 10px; /* Bordas arredondadas para um design moderno */
-    width: 90%;
-    max-width: 600px; /* Limite de largura para não ficar muito grande */
-    box-shadow: 0px 4px 8px rgba(255, 0, 0, 0.3); /* Sombra vermelha sutil */
+    padding: 20px;
+    max-width: 600px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.3); /* Sombra sutil vermelha */
 }
 
-/* 🔹 Estilização dos links */
-a {
-    color: red; /* Cor dos links */
-    text-decoration: none; /* Remove o sublinhado */
-    font-weight: bold;
-    transition: color 0.3s ease; /* Animação de transição */
+h2{
+    color: #ff4500;
 }
 
-/* 🔹 Efeito ao passar o mouse nos links */
-a:hover {
-    color: #ff4d4d; /* Cor mais clara ao passar o mouse */
-}
-
-/* 🔹 Deixando a lista de links alinhada */
-ul {
-    list-style: none; /* Remove os marcadores padrão */
+ul{
+    list-style: none;
     padding: 0;
 }
 
-/* 🔹 Itens da lista */
-li {
-    padding: 8px 0; /* Espaçamento entre itens */
+li{
+    margin: 10px 0;
 }
 
-/* 🔹 Responsividade para telas menores */
+/* Estilização dos links */
+a{
+    color: #ff4500;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a:hover{
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 2px solid #ff4500;
+}
+
+/* Animação nos certificados */
+.certificado{
+    display: inline-block;
+    padding: 10px;
+    background-color: #b30000;
+    color: white;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.certificado:hover{
+    transform: scale(1.1);
+    background-color: #ff4500;
+}
+
+/* Rodapé */
+footer{
+    background-color: #b30000;
+    padding: 10px;
+    margin-top: 20px;
+}
+
 @media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
     .foto-perfil {
-        width: 120px; /* Foto menor em telas pequenas */
-        height: 120px;
+        width: 100px;
     }
 
     section {
-        width: 100%; /* Ocupa toda a largura */
-        padding: 15px; /* Reduz o padding */
+        max-width: 90%;
+        padding: 15px;
     }
 }
